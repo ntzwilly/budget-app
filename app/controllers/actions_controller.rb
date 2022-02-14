@@ -1,5 +1,4 @@
 class ActionsController < ApplicationController
-
   def index
     redirect_to categories_url
   end
@@ -24,7 +23,6 @@ class ActionsController < ApplicationController
   private
 
   def action_params
-    params.fetch(:action, {}).permit(:name, :amount, :category_ids: [])
+    params.fetch(:action, {}).permit(:name, :amount, category_ids: [])
   end
-
 end
