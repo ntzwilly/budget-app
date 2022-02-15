@@ -74,6 +74,7 @@ GEM
     bootsnap (1.10.3)
       msgpack (~> 1.2)
     builder (3.2.4)
+    cancancan (3.3.0)
     capybara (3.36.0)
       addressable
       matrix
@@ -117,6 +118,8 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
+    material_icons (2.2.1)
+      railties (>= 3.2)
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
@@ -245,11 +248,13 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  cancancan
   capybara
   debug
   devise
   importmap-rails
   jbuilder
+  material_icons
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
