@@ -1,12 +1,18 @@
-<div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
+<%= link_to category_url(category), class:"text-decoration-none text-secondary" do %>
+  <li>  
+    <div class="card mx-4 my-2 h-75">
+      <div class="card-body d-flex align-items-center">
+          <%= image_tag(category.icon) %>
+          <div class="mx-3 w-100 d-flex justify-content-between mt-3">
+            <div class="d-flex flex-column h-100">
+              <p class="mb-4"><%= category.name %></p>
+              <p class="m-0 small"><%= category.created_at.strftime("%d %b %Y") %></p>
+            </div>
+            <strong>$<%= category.amount %></strong>
+          </div>
+      </div>
+    </div>
+  </li>
+<% end %>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= category.icon %>
-  </p>
-
-</div>
+ 
