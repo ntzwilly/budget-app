@@ -1,16 +1,18 @@
+<nav class="navbar d-flex fixed-top align-items-center px-3 login-nav">
+    <%= link_to 'home', root_url, class:"material-icons back-arrow"%>
+    <p class="m-0">CATEGORIES</p>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, data: {turbo: false}, class:"btn text-light btn-sm" %>
+</nav>
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
+<ul class="list-group mt-5">
+    <%= render @categories %>
+</ul>
 
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+<div class="bottom-div">
+  <div>
+    <%= link_to "NEW CATEGORY", new_category_path, class: "btn text-light new-category" %>
+  </div>
 </div>
 
-<%= link_to "New category", new_category_path %>
-
-<%= button_to "Sign Out", destroy_user_session_path, method: :delete, data: {turbo: false}, class:"btn btn-danger btn-small float-end" %>
