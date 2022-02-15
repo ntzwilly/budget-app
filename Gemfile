@@ -33,6 +33,8 @@ gem 'jbuilder'
 
 gem 'material_icons'
 
+gem 'cancancan'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
