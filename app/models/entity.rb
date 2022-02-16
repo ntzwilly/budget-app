@@ -1,4 +1,4 @@
-class Action < ApplicationRecord
+class Entity < ApplicationRecord
   validates :name, :amount, :categories, presence: true
   validates :amount, numericality: { greater_than: 0 }
 

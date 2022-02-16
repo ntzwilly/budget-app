@@ -1,19 +1,22 @@
 <div class="show-category">
-	<div class="total-amount">
-		<div>
-			<p>Total Amount:</p>
-			<p>$<%= @category.amount.round(2) %></p>
-		</div>
-		<%= render 'actions/index', locals: { deals: @deals } %>
+  <nav class="navbar d-flex align-items-center px-3 login-nav">
+    <%= link_to 'arrow_back', root_url, class:"material-icons back-arrow"%>
+    <p class="m-0">TRANSACTIONS</p>
+    <a></a>
+  </nav>
+
+	<div class="total-amount px-3">
+		<p class="m-0">Total Amount</p>
+		<p class="m-0"><strong>$<%= @category.amount.round(2) %></strong></p>
 	</div>
 
-	<%= render @category %>
+	 <%= render 'entities/index', locals: { entities: @entities } %>
 
 	<p style="color: green"><%= notice %></p>
 
 	<footer class="bottom-div">
 		<div>
-			<%= link_to 'ADD NEW TRANSACTION', new_action_path, class: "btn text-light new-category" %>
+			<%= link_to 'ADD NEW TRANSACTION', new_entity_path, class: "btn text-light new-category" %>
 		</div>
 	</footer>
 </div>

@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   validates :email, :name, presence: true
 
-  has_many :actions
+  has_many :entities
   has_many :categories
 end
