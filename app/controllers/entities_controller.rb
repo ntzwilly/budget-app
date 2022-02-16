@@ -1,7 +1,6 @@
 class EntitiesController < ApplicationController
+  load_and_authorize_resource
 
-   load_and_authorize_resource
-   
   def index
     redirect_to categories_url
   end
