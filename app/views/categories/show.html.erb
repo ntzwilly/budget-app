@@ -1,10 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="show-category">
+	<div class="total-amount">
+		<div>
+			<p>Total Amount:</p>
+			<p>$<%= @category.amount.round(2) %></p>
+		</div>
+		<%= render 'actions/index', locals: { deals: @deals } %>
+	</div>
 
-<%= render @category %>
+	<%= render @category %>
 
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+	<p style="color: green"><%= notice %></p>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+	<footer class="bottom-div">
+		<div>
+			<%= link_to 'ADD NEW TRANSACTION', new_action_path, class: "btn text-light new-category" %>
+		</div>
+	</footer>
 </div>

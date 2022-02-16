@@ -107,3 +107,7 @@ img {
 .card-body {
   height: 18vh;
 }
+
+.total-amount {
+  display: flex
+}
