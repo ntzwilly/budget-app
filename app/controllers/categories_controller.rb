@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_category, only: %i[show]
 
   def index
@@ -6,7 +7,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @actions = @category.actions.order(created_at: 'desc')
+    @entities = @category.entities.order(created_at: 'desc')
   end
 
   def new
@@ -36,7 +37,7 @@ class CategoriesController < ApplicationController
   private
 
   def set_category
-    @category = Category.find(params[:id])
+    @category = Category.includes(:entities).find(params[:id])
   end
 
   def category_params

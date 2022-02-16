@@ -1,10 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<div class="show-category">
+  <nav class="navbar d-flex align-items-center px-3 login-nav">
+    <%= link_to 'arrow_back', root_url, class:"material-icons back-arrow"%>
+    <p class="m-0">TRANSACTIONS</p>
+    <a></a>
+  </nav>
 
-<%= render @category %>
+	<div class="total-amount px-3">
+		<p class="m-0">Total Amount</p>
+		<p class="m-0"><strong>$<%= @category.amount.round(2) %></strong></p>
+	</div>
 
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+	 <%= render 'entities/index', locals: { entities: @entities } %>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+	<p style="color: green"><%= notice %></p>
+
+	<footer class="bottom-div">
+		<div>
+			<%= link_to 'ADD NEW TRANSACTION', new_entity_path, class: "btn text-light new-category" %>
+		</div>
+	</footer>
 </div>

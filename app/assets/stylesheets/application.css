@@ -107,3 +107,12 @@ img {
 .card-body {
   height: 18vh;
 }
+
+.total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 7vh;
+  color: var(--text-color);
+}

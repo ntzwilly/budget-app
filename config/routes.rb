@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     root to: 'categories#index', as: :authenticated_root
   end
   resources :categories
-  resources :actions
+  resources :entities
 
   root to: 'splash#index'
 end
