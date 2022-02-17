@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature 'Signup', type: :feature do
-  
   it 'Signing up as a new user' do
     visit new_user_registration_path
     within 'form' do
@@ -14,7 +13,6 @@ RSpec.feature 'Signup', type: :feature do
     expect(page).to have_content 'You have signed up successfully.'
   end
 
-  
   it 'Signing up with wrong informations' do
     visit new_user_registration_path
     within 'form' do
