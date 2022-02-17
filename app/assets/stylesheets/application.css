@@ -115,4 +115,17 @@ img {
   background-color: #fff;
   height: 7vh;
   color: var(--text-color);
+  position: fixed;
+  top: 6vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.category-body,
+.category-body-show {
+  margin-bottom: 14vh;
+}
+
+.category-body-show {
+  margin-top: 13vh;
 }

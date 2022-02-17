@@ -4,7 +4,7 @@
   <p class="m-0">LOGIN</p>
   <a></a>
   </nav>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form"}) do |f| %>
   <div class="login-button">
     <%= f.submit "Log in", class:"btn text-light"%>
   </div>
