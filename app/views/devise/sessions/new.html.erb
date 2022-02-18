@@ -1,0 +1,21 @@
+<div class="login">
+  <nav class="navbar d-flex align-items-center px-3 login-nav">
+  <%= link_to 'arrow_back', root_url, class:"material-icons back-arrow"%>
+  <p class="m-0">LOGIN</p>
+  <a></a>
+  </nav>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form"}) do |f| %>
+  <div class="login-button">
+    <%= f.submit "Log in", class:"btn text-light"%>
+  </div>
+  <div class="field form-group mt-3 email-field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password", class:"form-control" %>
+  </div>
+ <% end %>
+ <p class="mt-4 text-center text-secondary">Forgot password ?</p>
+</div>
+

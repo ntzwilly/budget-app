@@ -1,0 +1,32 @@
+<div class="add-category">
+  <nav class="navbar d-flex align-items-center px-3 login-nav">
+    <%= link_to 'arrow_back', root_url, class:"material-icons back-arrow"%>
+    <p class="m-0">NEW CATEGORY</p>
+    <a></a>
+  </nav>
+  <%= form_with(model: category) do |form| %>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group mt-3 email-field">
+    <%= form.text_field :name, class:"form-control", placeholder:"Name" %>
+  </div>
+
+  <div>
+    <%= form.text_field :icon, class:"form-control", placeholder:"Icon" %>
+  </div>
+
+  <div class="login-button">
+    <%= form.submit "Save", class:"btn text-light"%>
+  </div>
+ <% end %>
+</div>

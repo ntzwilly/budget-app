@@ -12,4 +12,120 @@
  *
  *= require_tree .
  *= require_self
- */
+ *= require material_icons
+*/
+
+:root {
+  --main-color: #3778c2;
+  --second-color: #5fb523;
+  --text-color: #434b54;
+  --splash-color: #f1f3f2;
+}
+
+body {
+  background-color: var(--splash-color);
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/app/assets/fonts/FontsFree-Net-Proxima-Nova-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova, sans-serif';
+  src: url(/app/assets/fonts/FontsFree-Net-Proxima-Nova-Light.otf);
+}
+
+.splash {
+  background-color: var(--splash-color);
+  height: 100vh;
+}
+
+.splash-header {
+  font-family: Proxima Nova, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.splash-text {
+  font-family: Proxima Nova, sans-serif;
+}
+
+.button {
+  background-color: var(--main-color);
+  color: #fff;
+  width: 90vw;
+  border-radius: 1px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.login-nav {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.login-button {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.back-arrow,
+.back-arrow :hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  height: 90px;
+  width: 90px;
+}
+
+.bottom-div {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 15vh;
+  width: 100vw;
+  background: var(--second-color);
+}
+
+.new-category {
+  border: 1px solid #fff;
+  width: 90vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-body {
+  height: 18vh;
+}
+
+.total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 7vh;
+  color: var(--text-color);
+  position: fixed;
+  top: 6vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.category-body,
+.category-body-show {
+  margin-bottom: 14vh;
+}
+
+.category-body-show {
+  margin-top: 13vh;
+}

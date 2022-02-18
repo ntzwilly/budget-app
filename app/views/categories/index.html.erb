@@ -1,0 +1,18 @@
+<nav class="navbar d-flex fixed-top align-items-center px-3 login-nav">
+    <%= link_to 'home', root_url, class:"material-icons back-arrow"%>
+    <p class="m-0">CATEGORIES</p>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, data: {turbo: false}, class:"btn text-light btn-sm" %>
+</nav>
+
+<p style="color: green"><%= notice %></p>
+
+<ul class="list-group mt-5 overflow-hidden category-body">
+    <%= render @categories %>
+</ul>
+
+<footer class="bottom-div">
+  <div>
+    <%= link_to "NEW CATEGORY", new_category_path, class: "btn text-light new-category" %>
+  </div>
+</footer>
+

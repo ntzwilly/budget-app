@@ -1,0 +1,22 @@
+<div class="show-category">
+  <nav class="navbar fixed-top d-flex align-items-center px-3 login-nav">
+    <%= link_to 'arrow_back', root_url, class:"material-icons back-arrow"%>
+    <p class="m-0">TRANSACTIONS</p>
+    <a></a>
+  </nav>
+
+	<div class="total-amount px-3">
+		<p class="m-0">Total Amount</p>
+		<p class="m-0"><strong>$<%= @category.amount.round(2) %></strong></p>
+	</div>
+
+	<div class="overflow-hidden category-body-show">
+	   <%= render 'entities/index', locals: { entities: @entities } %>
+	</div>
+
+	<footer class="bottom-div">
+		<div>
+			<%= link_to 'ADD NEW TRANSACTION', new_entity_path, class: "btn text-light new-category" %>
+		</div>
+	</footer>
+</div>
