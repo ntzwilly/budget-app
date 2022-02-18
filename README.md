@@ -15,6 +15,10 @@ To get a local copy up and running follow these simple example steps.
   - Rails
   - PostgreSQL
 
+## Live Demo on Heroku
+
+  - [Railsbugdetplus](https://railsbudgetplus.herokuapp.com/)
+
 ## Setup
 
 - Make sure you have Ruby IRB installed on your computer
@@ -30,10 +34,7 @@ bundle install
 
 ```sh
 # Create the database
-rake db:create
-
-# Load the schema
-rails db:schema:load
+rails db:create
 
 ## Apply migration (only if you generate a new migration file)
 rails db:migrate
@@ -63,4 +64,8 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used# Recipe App
+- Microverse
+- Original design idea by Gregoire Vella on Behance.
+
+
 
