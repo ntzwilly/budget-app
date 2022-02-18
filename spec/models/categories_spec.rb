@@ -24,7 +24,7 @@ RSpec.feature 'Operations Index Page', type: :feature do
     scenario 'I should see categories list with name and total amount and date button in the body' do
       expect(page).to have_content 'Category1'
       expect(page).to have_content 0
-      expect(page).to have_content '17 Feb 2022'
+      expect(page).to have_content '18 Feb 2022'
     end
   end
 end
